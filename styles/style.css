@@ -1,0 +1,358 @@
+@font-face {
+    font-family: 'inter-font';
+    src: url('../fonts/Inter-VariableFont_slnt,wght.ttf');
+}
+
+@font-face {
+    font-family: 'inter-font-semi-bold';
+    src: url('../fonts/Inter-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'inter-font-thin';
+    src: url('../fonts/Inter-Thin.ttf')
+}
+
+@font-face {
+    font-family: 'inter-font-extraBold';
+    src: url('../fonts/Inter-ExtraBold.ttf')
+}
+:root {
+    --main-color: rgba(10, 9, 9, 0.45);
+    --sentence-color: #d0bbbb
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+body {
+    background-color: black;
+}
+
+.form-sentence {
+    margin: 0px;
+}
+
+.huge-container {
+    display: flex;
+    height: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+.left-container {
+    flex: 1 1 350px;
+    background-image: url("../images/feed-preview.webp");
+    background-size: 850px;
+
+}
+
+.right-container {
+    flex: 2 1 450px;
+
+}
+
+.box-logo {
+    display: flex;
+    background: rgb(255, 233, 87);
+    width: 100%;
+    height: 15%;
+    margin-top: 125px;
+    align-items: center;
+    justify-content: center;
+    gap: 5px
+}
+
+.box-logo .logo > img {
+    width: 100px;
+    height: auto;
+}
+
+.box-logo .sentence {
+    font-family: inter-font-semi-bold;
+    color: #fffdfd;
+    font-size: 3em;
+    font-weight: bolder;
+    letter-spacing: -.05em
+}
+
+
+.right-container {
+    color: white;
+    display: flex;
+    flex-flow: column;
+    background-color: black;
+}
+
+.header {
+    font-family: inter-font;
+    margin-top: 45px;
+    margin-right: 90px;
+    margin-bottom: 95px;
+    font-size: 20px;
+    color: #d0bbbb;
+}
+
+.info {
+    line-height: 1.4;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.info-2 {
+    padding-top: 35px;
+    font-size: 20px;
+
+
+}
+
+.info, .info-2, .form-sentence {
+    margin-left: 35px;
+}
+
+.form-sentence {
+    background-color: var(--main-color);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: inter-font;
+    color: #d0bbbb;
+}
+
+em {
+    font-weight: bold;
+
+}
+
+.container-form {
+    background-color: var(--main-color);
+    box-shadow: 2px 2px 2px 1px rgb(234, 223, 31);
+
+
+}
+
+ .form-submit, .footer  {
+    margin-left: 35px;
+}
+
+.row-input label {
+    display: block;
+}
+
+
+
+.form-form {
+    display: flex;
+    flex-flow: column;
+    background-color: var(--main-color);
+    margin-left: 35px;
+    gap: 40px;
+    font-family: inter-font-semi-bold;
+    color: #d0bbbb;
+
+}
+
+.form-form:last-child {
+    /*padding-bottom:  20px;*/
+}
+
+.proba {
+    display: flex;
+    gap: 120px;
+
+}
+
+.row-input {
+    width: 40%;
+    position: relative;
+}
+
+[type="email"], [id="name"], [id="surname"],
+[type="email"], [type="tel"], [type="password"] {
+    width: 100%;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid #0a0a08;
+    margin-top: 10px;
+    background-color: #151313;
+    color: white;
+    transition: background-color 300ms linear;
+    -webkit-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    -o-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+}
+
+
+.form-form:last-child {
+    margin-bottom: 40px;
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotating {
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+.rotating {
+    -webkit-animation: rotating 6s linear infinite;
+    -moz-animation: rotating 6s linear infinite;
+    -ms-animation: rotating 6s linear infinite;
+    -o-animation: rotating 6s linear infinite;
+    animation: rotating 6s linear infinite;
+}
+
+.input-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    z-index: 1;
+
+}
+
+.label-name {
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    font-family: "Helvetica Neue", sans-serif ;
+    font-size: 12px;
+    font-weight: 400;
+    color: #706767;
+    letter-spacing: 0.1em;
+    transform: translateY(-5px);
+    transition: transform 200ms ease-in-out;
+}
+
+.input-field:focus ~ .input-label .label-name,
+.input-field:not(:placeholder-shown) ~ .input-label .label-name {
+    color: yellow;
+    font-family: inter-font-semi-bold;
+    font-weight: 400;
+    font-size: 0.85rem;
+    transform: translateY(-30px);
+    letter-spacing: normal;
+
+}
+
+.input-field:focus,
+.input-field:not(:placeholder-shown)   {
+    outline: none;
+    border-color: rgba(213, 180, 12, 0.81);
+    border-width: 1px;
+}
+
+
+.form-submit {
+    margin-top: 20px;
+    height: 10%;
+    width: 50%;
+}
+
+.submit {
+    height: 75%;
+    width: 45%;
+    background-color: rgba(10, 10, 8, 0);
+    border-color: #dace09;
+    color: #dace09 ;
+    border-style: solid;
+    font-family: inter-font-semi-bold;
+    font-size: 1rem;
+    border-radius: 5px;
+    ;
+
+}
+
+.submit:hover {
+    background-color: #dace09;
+    color: black;
+    transform: scale(1.1)
+
+}
+
+.footer {
+    display: flex;
+    gap: 5px;
+    font-size: 20px;
+}
+
+.footer-sentence {
+    color: var(--sentence-color);
+    font-family: inter-font
+}
+
+.log-in {
+    text-decoration: none;
+    color: #dace09;
+    font-family: inter-font-extraBold;
+}
+
+.log-in:hover {
+    color: white;
+}
+
+
+
+input:not(:focus):not(:placeholder-shown):invalid {
+    background-color: rgba(148, 18, 18, 0.31);
+    border-color: red ;
+    border-width: 1px;
+
+
+}
+
+input:not(:focus):not(:placeholder-shown):invalid ~ .input-label > .label-name:after {
+    position: absolute;
+    width: 150px;
+    font-family: inter-font;
+    color: red;
+    left: 0;
+    bottom: -50px;
+
+
+}
+
+input[type="email"]:not(:focus):not(:placeholder-shown):invalid ~ .input-label > .label-name:after {
+    content: "Invalid format (@)";
+}
+
+input[type="tel"]:not(:focus):not(:placeholder-shown):invalid ~ .input-label > .label-name:after {
+    content: "Invalid number (123456789)";
+    width: 200px;
+}
+
+input[type="password"]:not(:focus):not(:placeholder-shown):invalid ~ .input-label > .label-name:after {
+    content: "Passwords do not match!";
+    width: 200px;
+}
+

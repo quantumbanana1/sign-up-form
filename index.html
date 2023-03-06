@@ -1,0 +1,106 @@
+g<!doctype html>
+<html lang="en">
+<link rel="stylesheet" href="styles/style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div class="huge-container">
+    <div class="left-container">
+        <div class="box-logo">
+            <div class="logo rotating">
+            <img src="images/pngwing.com.png">
+            </div>
+            <div class="sentence">
+                Simbium
+            </div>
+        </div>
+    </div>
+    <div class="right-container">
+        <div class="header">
+            <div class="info">
+                Innovation is the driving force behind progress and growth in our world today. It's what enables us to create new technologies, develop cutting-edge products, and come up with fresh solutions to complex problems.
+
+            </div>
+            <div class="info-2">
+                What are <em>you</em> waiting for?
+            </div>
+        </div>
+
+            <div class="container-form">
+                <h1 class="form-sentence">Join Simbium!</h1>
+                <form id="commentform" class="comment-form" method="post">
+                    <div class="form-form">
+
+                        <div class="proba">
+                            <div class="row-input">
+                                <input id="name" class="input-field"   name="name" type="text" value="" pattern="^[^0-9]+$" size="30" maxlength="245"  placeholder=" "required>
+                                <label class="input-label" for="name" data-help="¿Are you 11 from Stranger Things?">
+                                    <span class="label-name">Name</span>
+                                </label>
+
+                            </div>
+                            <div class="row-input">
+                                <input  class="input-field" id="surname" placeholder=" " name="surname" type="text" value="" size="30" maxlength="245" required>
+                                <label  class="input-label" for="surname" data-help="A girl has no name- Arya Stark">
+                                    <span class="label-name">Surname</span>
+                                </label>
+
+
+                            </div>
+                        </div>
+                        <div class="proba">
+                            <div class="row-input">
+                                <input class="input-field" id="email" placeholder=" " name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required>
+                                <label class="input-label" for="email" data-help="Format email@email.com">
+                                    <span class="label-name">Email</span>
+                                </label>
+
+                            </div>
+                            <div class="row-input">
+                                <input class="input-field"   type="tel" id="phone" placeholder=" " name="phone"  pattern="[0-9]{9}" required>
+                                <label class="input-label"   for="phone" data-help="123456789">
+                                    <span class="label-name">Phone</span>
+                                </label>
+
+
+                            </div>
+                        </div>
+                        <div class="proba">
+                            <div class="row-input">
+                                <input  class="input-field"  type="password" id="password" placeholder=" " name="password" required>
+                                <label  class="input-label" for="password" >
+                                    <span class="label-name">Password</span>
+                                </label>
+
+
+                            </div>
+                            <div class="row-input">
+                                <input  class="input-field"  type="password" id="confirm-password" placeholder=" " name="confirm-password" required>
+                                <label class="input-label" for="confirm-password" >
+                                    <span class="label-name">Password</span>
+                                </label>
+
+
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        <div class="form-submit">
+            <input name="submit" type="submit" id="submit" class="submit" value="Post Comment">
+        </div>
+    </form>
+    <div class="footer">
+        <p class="footer-sentence">Already have an account?<p>
+        <a class="log-in" href="#">Log in</a>
+    </div>
+
+    </div>
+</div>
+<script src="scripts/script.js"></script>
+</body>
+</html>
